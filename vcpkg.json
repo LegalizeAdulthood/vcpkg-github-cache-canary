@@ -1,0 +1,7 @@
+{
+  "name": "vcpkg-github-cache-canary",
+  "version-string": "0.0.1",
+  "dependencies": [
+    "fmt"
+  ]
+}

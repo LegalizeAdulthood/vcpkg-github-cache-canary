@@ -22,9 +22,9 @@ in GitHub Packages.
 
 ## Testing a Candidate
 
-Edit `.github/workflows/canary.yml` and replace both `@v1` action refs with
-the candidate commit SHA or release tag under test.  Keep the setup and
-analyze refs in sync.
+Edit `.github/workflows/canary.yml` and replace both action refs with the
+candidate commit SHA or release tag under test.  Keep the setup and analyze
+refs in sync.
 
 Then push the branch or run the workflow manually.
 

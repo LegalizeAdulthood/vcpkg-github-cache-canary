@@ -52,10 +52,9 @@ jobs:
           set(VCPKG_CMAKE_SYSTEM_NAME Linux)
           EOF
 
-      # Replace @v1 with a full SHA for candidate validation, or with the
-      # exact release tag, such as @v1.3.0, for release validation.
+      # Keep this pinned to the candidate SHA under test.
       - name: Setup vcpkg cache
-        uses: LegalizeAdulthood/vcpkg-github-cache@v1
+        uses: LegalizeAdulthood/vcpkg-github-cache@596d53253e9c316e7db04eeb7d271d58166b5e25
         with:
           token: ${{ github.token }}
           vcpkg-root: vcpkg
@@ -99,7 +98,7 @@ jobs:
       # Keep this ref in sync with the setup step above.
       - name: Analyze vcpkg cache
         if: always()
-        uses: LegalizeAdulthood/vcpkg-github-cache/analyze@v1
+        uses: LegalizeAdulthood/vcpkg-github-cache/analyze@596d53253e9c316e7db04eeb7d271d58166b5e25
         with:
           token: ${{ github.token }}
           vcpkg-root: vcpkg
